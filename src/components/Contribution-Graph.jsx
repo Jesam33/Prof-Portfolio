@@ -2,7 +2,7 @@
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
-import { Slide } from "@/app/animation/Slide";
+import { Slide } from "@/app/Animation/Slide";
 
 export default function GithubCalendarComponent() {
   const [year, setYear] = useState(new Date().getFullYear());

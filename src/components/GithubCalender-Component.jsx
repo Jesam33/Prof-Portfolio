@@ -1,5 +1,5 @@
 import GitHubCalendar from 'react-github-calendar'
-import { Slide } from "@/app/animation/Slide";
+import { Slide } from "@/app/Animation/Slide";
 
 export default function GithubCalendarComponent() {
   return (
