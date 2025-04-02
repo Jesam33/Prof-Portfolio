@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Slide } from "@/app/animation/Slide";
+import { Slide } from "../Animation/Slide";
 
 export default function About() {
   const profile = {
