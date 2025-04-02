@@ -1,15 +1,53 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+@import "./Prism.css";
+
+body {
+  background-image: url("../../public/noise.png");
+  background-size: 200px 200px;
+  background-position: 0 0;
+}
+
+/* Font Settings */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--incognito), "Inter", sans-serif;
+}
+
+/* SVG Path Animation */
+.path {
+  stroke-dasharray: 500px 100px;
+  animation: animate 100s linear infinite alternate-reverse;
+}
+
+@keyframes animate {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 12433.8193359375;
+  }
+}
+
+/* Theme Variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --primary-color: #33E092;
+  --secondary-color: #0CCE6B;
+  --tertiary-color: #16a34a;
+  --primary-bg: rgba(39, 39, 43, 0.4);
+  --secondary-bg: rgba(250, 250, 250, 0.4);
+  --color-shadow-light: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  --color-shadow-dark: rgb(29, 29, 32) 0px 1px 0px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,10 +55,4 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
